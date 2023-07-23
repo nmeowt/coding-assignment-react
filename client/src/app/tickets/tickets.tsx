@@ -45,6 +45,7 @@ const defaultColumns = [
     filterable: false,
   },
   {
+    field: "details",
     headerName: 'Details',
     width: 100,
     filterable: false,
