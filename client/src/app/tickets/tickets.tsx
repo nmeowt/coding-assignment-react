@@ -6,7 +6,6 @@ import {
   GridColDef,
   GridRenderCellParams,
   GridToolbar,
-  GridValueGetterParams,
 } from '@mui/x-data-grid';
 import { Container, Stack, Typography, Button } from '@mui/material';
 import { TicketService } from "client/src/services";
@@ -49,7 +48,7 @@ const defaultColumns = [
     headerName: 'Details',
     width: 100,
     filterable: false,
-    valueGetter: (params: GridValueGetterParams) => {
+    renderCell(params: GridRenderCellParams) {
       const url = `/${params.row.id}`
       return <Button variant="contained" size="small" href={url}>Detail</Button>;
     }
