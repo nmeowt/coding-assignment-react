@@ -8,10 +8,9 @@ import {
   GridToolbar,
 } from '@mui/x-data-grid';
 import { Container, Stack, Typography, Button } from '@mui/material';
-import { AddTicket } from "client/src/components/tickets";
 import { TicketService } from "client/src/services";
 import { UserMap } from "client/src/utils/userMap";
-import { statusOnlyOperators } from "client/src/components/toolbar";
+import { AddTicket, statusOnlyOperators } from "client/src/components";
 
 export interface TicketsProps {
   users: User[];

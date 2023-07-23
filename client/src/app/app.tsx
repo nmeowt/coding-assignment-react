@@ -3,10 +3,10 @@ import { Routes, Route } from 'react-router-dom';
 import { User } from '@acme/shared-models';
 import styles from './app.module.scss';
 import Tickets from './tickets/tickets';
-import Header from '../components/header';
 import { Container } from '@mui/material';
 import { UserService } from '../services';
 import TicketDetails from './ticket-details/ticket-details';
+import { Header } from 'client/src/components';
 
 const App = () => {
   const [users, setUsers] = useState([] as User[]);

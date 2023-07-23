@@ -1,6 +1,5 @@
 import { Fragment, memo } from "react";
 import { Button } from '@mui/material';
-import { GridRowSelectionModel } from "@mui/x-data-grid";
 import { TicketService } from "client/src/services";
 
 interface ICompleteTicketProps {

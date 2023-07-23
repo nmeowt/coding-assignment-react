@@ -1,6 +1,4 @@
-import {
-  useParams, useNavigate,
-} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import styles from './ticket-details.module.css';
 import {
   Container,
@@ -14,7 +12,7 @@ import { Ticket, User } from '@acme/shared-models';
 import { useEffect, useMemo, useState } from 'react';
 import { UserMap } from 'client/src/utils/userMap';
 import { TicketService } from 'client/src/services';
-import { AssignTicket, CompleteTicket } from 'client/src/components/tickets';
+import { AssignTicket, CompleteTicket } from 'client/src/components';
 
 interface TicketDetailsProps {
   users: User[];
@@ -23,7 +21,6 @@ interface TicketDetailsProps {
 export function TicketDetails({ users }: TicketDetailsProps) {
   const { id } = useParams();
   const [ticket, setTicket] = useState({} as Ticket);
-  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchTicket() {
@@ -56,7 +53,8 @@ export function TicketDetails({ users }: TicketDetailsProps) {
   }
 
   const handleGoBack = () => {
-    navigate('/', { replace: true });
+    window.location.href = "/";
+
   };
 
   return (

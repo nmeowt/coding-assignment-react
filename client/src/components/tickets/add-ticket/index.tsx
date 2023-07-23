@@ -10,7 +10,7 @@ import {
 } from '@mui/material';
 import { TicketService } from 'client/src/services';
 import { Ticket } from '@acme/shared-models';
-import { modalStyles } from '../../theme/modal';
+import { modalStyles } from 'client/src/components';
 
 interface IAddTicketProps {
   handleDone: (ticket: Ticket) => void;

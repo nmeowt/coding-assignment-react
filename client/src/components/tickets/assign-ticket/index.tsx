@@ -11,7 +11,7 @@ import {
 } from '@mui/material';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { User } from '@acme/shared-models';
-import { modalStyles } from '../../theme/modal';
+import { modalStyles } from 'client/src/components';
 import { TicketService } from 'client/src/services';
 
 interface IAssignTicketProps {
